@@ -123,11 +123,12 @@ import SpeechRecognizer from 'react-native-speech-recognizer';
 
 ...
 
-componentWillMount() {
+constructor(props) {
+    super(props);
     this.state = {
         result: '';
     };
-    SpeechRecognizer.init(result=>this.setState({result}));
+    SpeechRecognizer.init( result => this.setState({result}));
 }
 
 ...
